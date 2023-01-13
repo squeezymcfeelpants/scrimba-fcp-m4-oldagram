@@ -1,0 +1,116 @@
+:root {
+	--page-bg-color: #222;
+	--app-bg-color: #fff;
+}
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--page-bg-color);
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.app-container {
+	background-color: var(--page-bg-color);
+	width: 375px;
+	margin: 0 auto;
+}
+
+.app-header {
+	height: 67px;
+	padding: 0 16px;
+	background-color: var(--app-bg-color);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo-img {
+	height: 45px;
+}
+
+.avatar-img {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+}
+
+.post {
+	margin-bottom: 13px;
+	background-color: var(--app-bg-color);
+}
+
+.post-header {
+	height: 55px;
+	padding: 0 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+}
+
+.poster-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.poster-name {
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.post-img {
+	display: block;
+	width: 100%;
+	height: 375px;
+}
+
+.icon-row {
+	padding: 16px 10px 10px;
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+}
+
+.icon-flipper[data-liked="yes"] :not([data-liked="yes"]),
+.icon-flipper[data-liked="no"] :not([data-liked="no"]) {
+	display: none;
+}
+
+.icon {
+	width: 24px;
+	height: 24px;
+	display: block;
+	cursor: pointer;
+	transition: all 100ms ease-in-out;
+}
+
+.icon:hover {
+	transform: scale(1.25);
+	filter: drop-shadow(4px 4px 2px #111)
+}
+
+.post-interactions {
+	padding-bottom: 10px;
+}
+
+.post-interactions p {
+	margin-left: 10px;
+}
+
+.post-interactions p .bold,
+.post-likes {
+	font-weight: 700;
+}
+
+.post-comments {
+	margin-top: 8px;
+}
+
